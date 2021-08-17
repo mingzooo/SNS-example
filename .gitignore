@@ -34,4 +34,4 @@ yarn-error.log*
 .vercel
 
 #firestore
-/firestores/firebaseConfig.js
+# /firestores/firebaseConfig.js
