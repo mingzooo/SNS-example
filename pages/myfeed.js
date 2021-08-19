@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Divider } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import Profile from "../components/myfeed/Profile";
-import PhotoGrid from "../components/myfeed/PhotoGrid";
+import Profile from "../components/myFeed/Profile";
+import PhotoGrid from "../components/myFeed/PhotoGrid";
 import PageLoading from "../components/common/PageLoading";
 
 const useStyles = makeStyles((theme) => ({
@@ -40,10 +40,8 @@ const myfeed = () => {
   if (loading) return <PageLoading />;
   return (
     <>
-      {/* Profile 컴포넌트(유저의 프로필 정보를 가진 컴포넌트)를 조립해주세요. */}
-      <Profile user={user} />
+      <Profile user={user} getUserInfo={getUserInfo} />
       <Divider variant="middle" light className={classes.divider} />
-      {/* PhotoGrid 컴포넌트(유저가 올린 피드가 뜨는 컴포넌트)를 조립해주세요. */}
       <PhotoGrid feedList={feedList} />
     </>
   );
