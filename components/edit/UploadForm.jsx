@@ -146,17 +146,17 @@ const UploadForm = (/*  알맞은 props를 전달해주세요. */) => {
   async function updateFeed() {
     /* 1. 피드를 업데이트 하기 위해, api에 전달해야하는 인자를 적어주세요 (5가지) */
     const updateParams = {
-      /* 채워주세요. */
-      /* 채워주세요. */
-      /* 채워주세요. */
-      /* 채워주세요. */
-      /* 채워주세요. */
+      content,
+      location,
+      tag,
+      author,
+      photoUrl,
     };
 
     try {
       /* 2. 피드의 업데이트를 위한 api에 요청을 보내주세요. */
-      const updateResult = await fetch(/* 채워주세요. */, {
-        method: /* 채워주세요. */,
+      const updateResult = await fetch(`/api/feed/${feedUid}`, {
+        method: "PATCH",
         body: JSON.stringify(updateParams),
         headers: {
           "Content-type": "application/json; charset=UTF-8",
